@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Varaibles</title>
+</head>
+
+<style>
+
+    :root{   /* here we declare the root scope */
+        --color: blue;   
+        --seccol: yellow;    /* global variable */
+
+
+        /* Note: it can not only hold colors but other properties as well */
+        --colpad: 20px;  /* now we can use this further like others */
+
+    }
+
+
+    /* Normal declaration  */
+    /* .box1{
+        background-color: green;
+    }
+    .box2{
+        background-origin: red;
+    } */
+
+
+
+    /* Declaration with variables  */
+    .box1{
+        background-color: var(--color);
+    }
+    .box2{
+        background-origin: var(--seccol);
+        background-origin: var(--seccol, blue);   /* blue is default value if color value is not found */
+    }
+
+    div{
+        --seccol: white;    /* local variable */
+        color: var(--seccol);
+    }
+</style>
+<body>
+    <div class="box1">
+        Box 1
+    </div>
+    <div class="box2">
+        Box 2
+    </div>
+
+
+    When we want to change entire theme with just one declaration then we use variables
+    Also they are global variables
+
+    If we want its variant specifically for a class, we can do that by declaring it again locally
+</body>
+</html>

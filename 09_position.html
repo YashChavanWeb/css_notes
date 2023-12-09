@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+</head>
+<style>
+    .box {
+        border: 2px solid red;
+        width: 50px;
+        height: 50px;
+    }
+
+    .box1 {
+        position: static;
+        background-color: red;
+    }
+
+    .box2 {
+        position: relative;
+        top: 10px;
+        /*come down from top to 10px*/
+        right: 10px;
+        /*will leave 10px space to right and go to left*/
+        background-color: blue;
+    }
+
+    .box3 {
+        position: absolute;
+        top: 0;  /* box will stick the top as its parent has no position element */
+
+        background-color: green;
+    }
+
+    .box4 {
+        position: fixed;
+        position: sticky;
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+
+    The position is by default static
+    Types of Position
+    static - jahan hai wahin rahega
+    relative - wahi rahega but we can apply top bottom and rest properties on it
+    absolute - it acts relative to the nearest position ancestor
+    fixed - fix at one place no matter you scroll or what
+    sticky - sticky to the border when we try to go out of the page
+
+
+    Note: If 2 boxes are overlapping and you want first box to go on top
+    then make box 1 display as relative and set its zindex as 1
+    to set z index we need to make it relative
+
+    Note: transform, filter or perspective properties can also make an element appear as positioned
+</body>
+
+</html>

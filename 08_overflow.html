@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow & its Properties</title>
+</head>
+<style>
+    .box{
+        /* if the text is overflowing the text then we use scrolling functionality */
+        overflow: scroll;
+        overflow: auto;   /* if it is not overflowing then automatically it will remove the scrollbar*/
+        overflow: clip; /* it will disable scrolling and clip the content */
+        overflow-x: auto;   /* only scroll in x not in y*/
+        overflow: hidden auto;  /* hidden in x and auto in y */
+        
+
+
+        white-space: nowrap;  /* it will scroll horizontally */
+        
+        text-overflow: ellipsis;  /* dot will come at the end after clipping */
+
+
+    }
+</style>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eveniet accusamus fugiat illum adipisci facilis exercitationem earum, provident neque. Consequuntur iure laboriosam nam minus voluptas magnam doloribus ipsum debitis voluptate sed? Minima ab quae, nostrum, et veniam molestiae aperiam architecto inventore nesciunt, sed distinctio at.
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Properties</title>
+</head>
+<style>
+    .container{
+        border: 2px solid black;
+
+        display: inline;  /* does not support anything */
+        display: inline-block; /* this can be helpful */
+        
+        display: none;  /*container and uski jagah dono gayab ho jaenge */
+        visibility: hidden;  /*container gayab but uski jagah waise hi rahegi */
+
+        display: flex;    /* the container will show changes inside */
+        justify-content: center;  /* like bringing elements to center*/
+        display: inline-flex;   /* the container acts as inline element from outside */
+
+        display: grid;
+
+    }
+</style>
+
+<body>
+    <div class="container">
+        Note : 
+        If element is inline, then it does not support padding/margin top
+        inline does not support increasing the width
+        
+        To solve this you make the display as inline-block
+    </div>
+
+</body>
+
+</html>

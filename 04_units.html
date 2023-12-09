@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+</head>
+
+<style>
+    p{
+        /* Becomes automatically responsive */
+
+        box-sizing: border-box;    /* removes the extra scrolling */
+
+        width: 100vw;   /* entire viewport width */
+        margin: auto;  /* brings block element in the center */
+
+        font-size: 1.5em;  /* inherits the font size by 1.5 times - by default is 16px */
+        font-size: 2rem;   /* 2 times of root element font size */
+
+        width: 100vmin;    /*in phone width is min so it will be 100 vw */
+        width: 100vmax;    /*in phone height is max so it will be 100 vh */
+
+        width: 50%;   /* 50% of the parent */
+
+        min-height: 10px; 
+        /* Minimum itni to rakho and agar content aaya to automatic badhte jao */
+
+    }
+</style>
+
+<body>
+    <p>Yash Chavan</p>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+
+<style>
+
+    /* Element Selector  */
+    p{
+        color: red;
+    }
+
+    /* Class Selector  */
+    .hello{
+        color: blue;
+    }
+
+    /* Id Selector */
+    #hello{
+        color: red;
+    }
+
+    /* Child Selector - Direct Child */
+    div > p{    
+        /* div ke andar ke paras ka color green ho jaye */
+        color: green;
+    }
+
+    /* Descendent Selector - Any descendent */
+    div p {
+        /* div ke andar wale p - even if it is inside a span tag, its fine it is a descendent  */
+        background-color: red;
+    }
+
+    /* Universal Selector  */
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Pseudo Selector - for Links  */
+    a:visited{
+        color: red;
+    }
+
+    a:link{
+        /* Not visited */
+        color: blue;
+    }
+
+    a:active{
+        /* When you are clicking on the link  */
+        background-color: red;
+    }
+
+    a:hover{
+        padding: 10px;
+    }
+    
+    p:first-child
+    {
+        /* wherever p is the first child of the parent  */
+        color: red;
+    }
+
+
+</style>
+
+<body>
+
+    <div>
+        <p>This is Yash</p>
+    </div>
+
+</body>
+</html>
