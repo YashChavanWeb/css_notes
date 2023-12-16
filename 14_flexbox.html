@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+</head>
+
+<style>
+    .container {
+        border: 2px solid black;
+        display: flex;
+        /* container ke andar ke elements change ho sakte hai properties se */
+
+        /* ------------------ Properties for Container ------------------  */
+
+        justify-content: center;
+        /* horizontally center */
+        justify-content: flex-end;
+        /* to the right */
+        justify-content: flex-start;
+        /* to the left */
+        justify-content: right;
+        /* to the right */
+        justify-content: left;
+        /* to the left */
+        justify-content: space-around;
+        /* space between boxes and the border */
+        justify-content: space-between;
+        /* space between only the boxes */
+        justify-content: space-evenly;
+        /* equal spaces between the border and the boxes */
+
+
+
+        align-items: center;
+        /* vertically center */
+
+
+        flex-direction: column;
+        flex-direction: column-reverse;
+        flex-direction: row;
+        /* by default row me hi hote hai */
+        flex-direction: row-reverse;
+
+
+        /* Note : if flex direction is row - it is towards main axis
+                  if flex direction is column - it is cross axis 
+                for flex direction column vice versa
+
+                Justify content main axis ke according hi center karega
+
+        */
+
+
+        flex-wrap: wrap;
+        /* for responsiveness */
+
+
+
+        /* if we have only just one line  - we use align items */
+        /* if we have multiple lines  - we use align content */
+        /* Note: There is no justify items in flexbox */
+
+        align-content: center;
+
+
+        /* Flex flow property */
+        /* Syntax: flex-flow: <flex-direction>  <flex-wrap>  */
+        flex-flow: row wrap;
+
+
+        /* Gap property */
+        gap: 10px;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+
+
+    .items {
+        height: 20px;
+        width: 20px;
+        border: 2px solid black;
+        background-color: red;
+        margin: 4px;
+
+        /* ------------------ Properties for Items ------------------  */
+
+        order: 2;
+        /* jiska jyada order wo utne end me aayega  */
+
+        flex-grow: 2;
+        flex-grow: 1;
+        /* by default flex grow 0 hota hai */
+
+
+        flex-shrink: 2;
+        /* jab responsive hogs to apni size ke 1/2 se shrink hoga */
+
+
+
+        align-self: flex-end; /* only particular item will change its position */
+
+
+
+    }
+</style>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+            <div class="items"></div>
+        </div>
+    </main>
+</body>
+
+</html>

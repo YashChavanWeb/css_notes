@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float and Clear</title>
+</head>
+
+<style> 
+
+
+    /* This is old type  */
+
+
+    img{
+        float: left;  /* allows the content to be on the left */
+        float: right;  /* allows the content to be on the left */
+    }
+
+    .card{
+        display: flow-root;  /* with this the image will fix in the container and will not overflow */
+    }
+
+
+
+    /* If you dont want to allow anything to float on your div / text */
+
+    .card:nth-child(2){
+        clear: right;    /* right me koyi bhi element nahi chahiye float karne */
+
+        float: left;    /* ab it is allowed as right pe kuch nahi ho raha */
+
+        clear: both;  /* both side me nahi dikhna chahiye */
+    }
+
+</style>
+
+<body>
+    <div class="cards"><img src="yash.png" alt="">
+
+        <div class="card"><p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum blanditiis error labore praesentium iure, sint optio nisi iusto tempore asperiores eveniet laudantium laboriosam? Porro aliquid ipsum laudantium dolor, non assumenda inventore optio deleniti temporibus.
+        </p></div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>

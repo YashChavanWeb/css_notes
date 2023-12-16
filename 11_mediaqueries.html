@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+</head>
+
+<style>
+
+    /* Media Query Syntax: */
+    
+    /* @media not/only mediatype and (expressions){
+        css code
+    } */
+
+
+    body{
+        background-color: blue;
+    }
+
+    /* Type 1  */
+    @media only screen and (max-width:45px){
+        body{
+            background-color: red;
+        }
+    }
+
+
+    /* Type 2 */
+    @media screen and (orientation: landscape){
+        body{
+            border: 2px solid white;
+        }
+
+    }
+
+    /* Note : height > width -> portrait
+              width > height -> landscape  */
+
+</style>
+<body>
+    
+</body>
+</html>

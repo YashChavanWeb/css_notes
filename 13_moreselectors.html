@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+</head>
+
+<style>  
+    .box:first-child{   /* agar boxes first child hai apne parent ka to ye kardo */
+        color: red;
+    }
+
+    .boxes::first-line{
+        background-color: blue;
+    }
+
+
+    .boxes *{    /* boxes ke saare elements pe ye apply ho jaega */
+        border: 2px solid yellow;
+    }
+
+
+    .boxes::before{   /* main content se pehle ye content aayega */
+        content: "This is yash";
+    }
+
+    
+    .boxes::after{   /* main content ke baad ye content aayega */
+        content: "This is yash";
+    }
+
+  
+    ::selection{   /* if element not written then this will apply to entire page */
+        color: red;   /* mouse se select karenge to ye color aayega */
+    }
+
+
+    input::placeholder{
+        color: red;
+    }
+
+    
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">This is Box 1</div>
+        <div class="box">This is Box 2</div>
+        <div class="box">This is Box 3</div>
+
+        <input type="text" placeholder="Enter Name">
+    </div>
+</body>
+</html>
